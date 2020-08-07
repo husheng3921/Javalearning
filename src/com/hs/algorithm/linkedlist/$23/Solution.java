@@ -63,7 +63,7 @@ public class Solution {
      */
     public ListNode mergeKLists1(ListNode[] lists) {
 
-        //维持大顶堆
+        //维持小顶堆
         PriorityQueue<ListNode> queue = new PriorityQueue<>((o1, o2) -> o1.val - o2.val);
         for (ListNode node : lists){//k条链表，堆大小为k
             queue.offer(node);

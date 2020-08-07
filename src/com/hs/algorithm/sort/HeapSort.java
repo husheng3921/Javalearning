@@ -9,7 +9,9 @@ package com.hs.algorithm.sort;
  */
 public class HeapSort {
     public void headSort(int[] array) {
-        if (array.length == 0) return;
+        if (array.length == 0) {
+            return;
+        }
 
         int length = array.length;
         for (int i = length / 2 - 1; i >= 0; i--){
@@ -48,7 +50,9 @@ public class HeapSort {
         int[] nums = {1, -2, 29, -33, 90, 100, 45, 25};
         HeapSort hs = new HeapSort();
         hs.headSort(nums);
-        for (int num : nums)
+        for (int num : nums){
             System.out.print(num +" ");
+        }
+
     }
 }

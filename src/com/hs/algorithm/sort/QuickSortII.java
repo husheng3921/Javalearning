@@ -12,7 +12,7 @@ public class QuickSortII {
 
     public void sort(int[] array, int lo, int hi) {
         if (hi <= lo) return;
-        int j = partition(array, lo, hi);
+        int j = partition1(array, lo, hi);
         sort(array, lo, j-1);
         sort(array, j + 1, hi);
     }
@@ -43,6 +43,42 @@ public class QuickSortII {
         array[lo] = array[j];
         array[j] = temp;
         return j;// a[lo..j-1] <= a[j] <= a[j+1...hi]
+    }
+    //双指针循环法
+    public int partition1(int[] array, int low, int high){
+        int pivot = array[low];//取第一个元素为基准元素
+        int left = low;
+        int right = high;
+        while (left < right){
+            //先右后左
+            //右指针左移
+            while (left < right && array[right] > pivot){
+                right--;
+            }
+            //左指针右移，注意出界
+            while (left < right && array[left] <= pivot){
+                left++;
+            }
+
+            //交换left和right指向的元素
+            if (left < right){
+                swap(array, left, right);
+                /*int temp = array[left];
+                array[left] = array[right];
+                array[right] = temp;*/
+            }
+
+        }
+        swap(array, low, left);
+        /*array[low] = array[left];
+        array[left] = pivot;*/
+        return left;
+    }
+
+    private void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     public static void main(String[] args) {

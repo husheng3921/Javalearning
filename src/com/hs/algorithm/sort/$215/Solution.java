@@ -2,6 +2,7 @@ package com.hs.algorithm.sort.$215;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Random;
 
 /**
  * TODO
@@ -66,13 +67,48 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int [] nums = {3,2,1,5,6,4};
+        int [] nums = {6, 1, 3, 5, 7, 2, 4, 9, 11, 8};
         Solution solution = new Solution();
-        int res = solution.findKthLargest1(nums, 2);
+        int res = solution.findKthLargest2(nums, 2);
         System.out.println(res);
         for (int num : nums){
             System.out.print(num+"-");
         }
     }
 
+    public  int findKthLargest2(int[] nums, int k){
+        int length = nums.length;
+        int left = 0, right = length - 1;
+        while (true){
+            int partion = partition2(nums, 0, length -1);
+            if (k == partion+1){
+                return nums[partion];
+            }else if(k > partion+1){
+                left = partion + 1;
+            }else {
+                right = partion - 1;
+            }
+        }
+    }
+    private int partition2(int[] nums, int left, int right){
+        if (left < right){
+            int random = left + new Random().nextInt(right - left);
+            swap(nums, random, right);
+        }
+        int i = left;
+        int pivot = right;
+        for (int j = left; j < right; j++){
+            if (nums[j] > nums[pivot]){
+                swap(nums, j, i);
+                i++;
+            }
+        }
+        swap(nums, i, pivot);
+        return i;
+    }
+    private void swap(int[] nums, int x, int y){
+        int temp = nums[x];
+        nums[x] = nums[y];
+        nums[y] = temp;
+    }
 }
