@@ -47,6 +47,22 @@ public class Solution {
         }
         return maxSum;
     }
+    public int maxSubArray3(int[] nums) {
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        int max = nums[0];
+        //dp[i]表示以i结尾的元素的子数组最大和
+        for(int i = 1; i < nums.length; i++){
+            if(dp[i-1]>0){
+                dp[i] = nums[i] + dp[i-1];
+            }else{
+                dp[i] = nums[i];
+            }
+            //更新最大子数组和
+            max = Math.max(max, dp[i]);
+        }
+        return max;
+    }
     public static void main(String[] args) {
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
         Solution solution = new Solution();
