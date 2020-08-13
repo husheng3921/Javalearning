@@ -88,4 +88,8 @@ public class QuickSortII {
         for (int num : nums)
             System.out.print(num + " ");
     }
+    private int randomPartition(int[] arr, int left, int right){
+        //int i = random(left, right);
+        return 0;
+    }
 }
