@@ -63,4 +63,29 @@ public class Solution {
         return res;
     }
 
+    /**
+     * 不能用队列
+     * @param root
+     * @return
+     */
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if (root == null){
+            return res;
+        }
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode cur = stack.pop();//取栈顶元素
+            res.add(cur.val);//取结果
+            //栈先进后出，左节点出栈在前，则右节点先进栈
+            if (cur.right != null){
+                stack.push(cur.right);//这里技巧，不是插入左边
+            }
+            if (cur.left != null){
+                stack.push(cur.left);
+            }
+        }
+        return res;
+    }
 }
