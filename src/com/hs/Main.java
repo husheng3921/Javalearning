@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * look in "c:\\user"
@@ -35,6 +36,8 @@ public class Main {
         User user2 = new User(1, "hh");
         maps.put(user1,"hh");
         maps.put(user2, "hh");
+        Map<String, String> map2 = new ConcurrentHashMap<>();
+
         System.out.println(maps.size());
     }
 }

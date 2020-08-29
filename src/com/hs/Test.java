@@ -26,6 +26,7 @@ public class Test {
         };
         t.run();
         System.out.println(22);
+        new Test().fun();
 
     }
     public int strToInt(String str){
@@ -36,6 +37,9 @@ public class Test {
         }
 
         return 10;
+    }
+    public void fun(){
+        System.out.println(super.getClass().getName());
     }
     static void pong(){
         System.out.println("信用卡");
