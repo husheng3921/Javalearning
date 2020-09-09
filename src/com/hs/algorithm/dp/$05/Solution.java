@@ -49,4 +49,35 @@ public class Solution {
         String res = (new Solution()).longestPalindrome(s);
         System.out.println(res);
     }
+    public String solution(String s){
+        //特判
+        int len = s.length();
+        if(len < 2){
+            return s;
+        }
+        int maxLen = 1;
+        int begin = 0;
+        boolean[][] dp = new boolean[len][len];
+        for(int i = 0; i < len; i++){
+            dp[i][i] = true;
+        }
+        for (int j = 1; j < len; j++){
+            for (int i = 0; i < j; i++){
+                if(s.charAt(i) != s.charAt(j)){
+                    dp[i][j] = false;
+                }else{
+                    if(j - i < 3){//两个字符，三个字符，首尾相同
+                        dp[i][j] = true;
+                    }else{
+                        dp[i][j] = dp[i+1][j-1];//转移
+                    }
+                }
+                if(dp[i][j] && j-i+1 > maxLen){
+                    maxLen = j-i+1;
+                    begin = i;
+                }
+            }
+        }
+        return s.substring(begin,begin+maxLen);
+    }
 }

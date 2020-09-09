@@ -53,6 +53,7 @@ public class HeapSort {
         for (int num : nums){
             System.out.print(num +" ");
         }
+        int[] arr = {57,40,38,11,13,34,48,75,6,19,9,7};
 
     }
 }

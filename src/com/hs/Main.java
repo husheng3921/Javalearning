@@ -39,5 +39,11 @@ public class Main {
         Map<String, String> map2 = new ConcurrentHashMap<>();
 
         System.out.println(maps.size());
+
+        Integer aa = 30;
+        Integer bb = 30;
+        System.out.println(aa == bb);
+        String s1 = "33";
+
     }
 }
