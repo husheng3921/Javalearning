@@ -66,7 +66,10 @@ public class Solution {
         //维持小顶堆
         PriorityQueue<ListNode> queue = new PriorityQueue<>((o1, o2) -> o1.val - o2.val);
         for (ListNode node : lists){//k条链表，堆大小为k
-            queue.offer(node);
+            if(node != null){
+                queue.offer(node);
+            }
+
         }
         if(queue.isEmpty()) return null;//防止空链表
         ListNode dumpy = new ListNode(-1);
