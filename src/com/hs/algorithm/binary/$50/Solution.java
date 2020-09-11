@@ -12,7 +12,7 @@ public class Solution {
             N = -N;
             x= 1/x;
         }
-        return fastPow(x,n);
+        return fastPow(x,N);
     }
     private double fastPow(double x, long n){
         if(n == 0) {

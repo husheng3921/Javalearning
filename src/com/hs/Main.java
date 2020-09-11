@@ -36,10 +36,18 @@ public class Main {
         Map<String, String> map2 = new ConcurrentHashMap<>();
 
         System.out.println(maps.size());
+<<<<<<< HEAD
         Set<Integer> set = new HashSet<>();
         set.add(1);
         boolean res = set.add(1);
         System.out.println(res);
+=======
+
+        Integer aa = 30;
+        Integer bb = 30;
+        System.out.println(aa == bb);
+        String s1 = "33";
+>>>>>>> ba1d6b756879e4567439f92fff06ea3b3503863d
 
     }
 }
