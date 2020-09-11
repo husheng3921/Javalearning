@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * TODO
- *
+ * 组合总和I，无限次取
  * @author hushe
  * @date 2020/7/18/0018 16:01
  * @email husheng3921@163.com
@@ -67,6 +67,12 @@ public class Solution {
         }
     }
 
+    /**
+     * 数组元素重复，
+     * @param candidates
+     * @param target
+     * @return
+     */
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);//必须排序

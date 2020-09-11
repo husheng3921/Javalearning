@@ -1,13 +1,8 @@
-package com.hs.algorithm.bfsdfs.$200;
-
-import com.hs.thread.communication.wait.comsummer.$2.P;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package com.hs.algorithm.bfsdfs.$200island;
 
 /**
  * TODO
- * 简单
+ * 岛屿数量
  * https://leetcode-cn.com/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/
  * @author hushe
  * @date 2020/7/18/0018 19:20

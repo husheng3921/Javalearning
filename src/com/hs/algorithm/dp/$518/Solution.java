@@ -10,11 +10,17 @@ package com.hs.algorithm.dp.$518;
 public class Solution {
     public int change(int amount, int[] coins) {
         int n = coins.length;
+        //dp[i][j]使用前i个硬币组成j的方案数
+
         int[][] dp = new int[n + 1][amount + 1];
-        // base case
+        // base case,金额为0时，任何都不选，为1
         for (int i = 0; i <= n; i++)
             dp[i][0] = 1;
-
+        /**
+         * dp[i][j]：coins[0-i-1]这i个硬币，组成金额为j,得到的组合数
+         * dp[i][j]依赖两个状态：1、不选coins[i-1],只能在前i-1个凑成j
+         * 2、选conis[i]，则总金额减少到j-coins[i-1],dp[i][j-coins[i-1]
+         * */
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= amount; j++)
                 if (j - coins[i-1] >= 0)
