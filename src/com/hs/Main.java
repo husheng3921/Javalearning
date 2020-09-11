@@ -36,6 +36,7 @@ public class Main {
         User user2 = new User(1, "hh");
         maps.put(user1,"hh");
         maps.put(user2, "hh");
+        //maps.getOrDefault()
         Map<String, String> map2 = new ConcurrentHashMap<>();
 
         System.out.println(maps.size());

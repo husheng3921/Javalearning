@@ -2,7 +2,7 @@ package com.hs.algorithm.binary.$153;
 
 /**
  * TODO
- * LC153 寻找旋转排序数组中的最小值 中等
+ * LC153 寻找旋转排序数组中的最小值 中等,无重复数组
  * @author hushe
  * @date 2020/5/1/0001 10:01
  * @email husheng3921@163.com
