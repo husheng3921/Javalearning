@@ -1,9 +1,6 @@
 package com.hs;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -39,5 +36,10 @@ public class Main {
         Map<String, String> map2 = new ConcurrentHashMap<>();
 
         System.out.println(maps.size());
+        Set<Integer> set = new HashSet<>();
+        set.add(1);
+        boolean res = set.add(1);
+        System.out.println(res);
+
     }
 }

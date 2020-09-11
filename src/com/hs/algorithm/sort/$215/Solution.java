@@ -30,6 +30,20 @@ public class Solution {
         quickSort(nums,left, mid - 1);
         quickSort(nums,mid + 1, right);
     }
+    public int solution(int[] nums,int k){
+        int left = 0;
+        int right = nums.length - 1;
+        int piovt = partition(nums, left, right);
+        while (piovt != k - 1){
+
+            if(k-1 > piovt){
+                piovt = partition(nums, piovt + 1, right);
+            }else {
+                piovt = partition(nums, left, piovt - 1);
+            }
+        }
+        return nums[piovt];
+    }
     public int partition(int[] nums, int left, int right) {
         int pivot = left;//基准值
         int counter = left;//a[left..counter-1]> a[counter] > a[counter+1,..right]

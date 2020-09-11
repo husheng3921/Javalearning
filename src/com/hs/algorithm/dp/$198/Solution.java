@@ -10,7 +10,7 @@ package com.hs.algorithm.dp.$198;
 public class Solution {
     /**
      * 偷窃第K间屋，不偷k-1, 则金额为k-2 + nums[k]
-     * 不偷窃k间屋，则偷K-1，金额为k-1
+     * 不偷窃第k间屋，则偷K-1，金额为k-1
      * 即结果为 dp[k] = max(dp[k-1],dp[k-2]+nums[k])
      * O(n) O(n)
      * @param nums
