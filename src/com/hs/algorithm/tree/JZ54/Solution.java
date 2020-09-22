@@ -22,4 +22,25 @@ public class Solution {
         if(--k == 0) res = root.val;
         dfs(root.left);
     }
+    int count = 0;
+    TreeNode ans;
+    public TreeNode kthLargest1(TreeNode root, int k){
+        if(root == null){
+            return root;
+        }
+        dfs(root,k);
+        return ans;
+    }
+
+    private void dfs(TreeNode root, int k){
+        if(root == null){
+            return;
+        }
+        dfs(root.left,k);
+        count++;
+        if(count == k){
+            ans = root;
+        }
+        dfs(root.right, k);
+    }
 }

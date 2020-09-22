@@ -135,7 +135,7 @@ public class Solution {
         String res = (new Solution()).minWindow(S, T);
         System.out.println(res);
         /*int[] stock = {23, 24, 25, 21, 12, 22, 31, 23};
-        int[] reslist = (new Solution()).list(stock);
+        int[] reslist = (new Solution78()).list(stock);
         for(int item:reslist){
             System.out.print(item+" ");
         }*/
@@ -147,7 +147,7 @@ public class Solution {
         System.out.println(1^(a2^c2));
 
         int[]rooms = {0,1,0,1,1,0,0,1};
-        int[]res = (new Solution().list2(rooms, 7));
+        int[]res = (new Solution78().list2(rooms, 7));
         for(int item : res){
             System.out.print(item+" ");
         }*/

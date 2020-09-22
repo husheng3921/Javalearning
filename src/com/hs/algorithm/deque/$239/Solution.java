@@ -58,7 +58,7 @@ public class Solution {
      * @return
      */
     public int[] maxSlidingWindow2(int[]nums, int k) {
-        Deque<Integer> max = new ArrayDeque<>();
+        Deque<Integer> max = new LinkedList<>();
         int n = nums.length;
         int[] res = new int[n-k+1];
         int index = 0;
@@ -89,6 +89,7 @@ public class Solution {
                 return o2 - o1;
             }
         });
+
         int n = nums.length;
         int[] res = new int[n-k+1];
         int index = 0;

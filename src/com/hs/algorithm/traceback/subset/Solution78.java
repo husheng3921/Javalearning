@@ -1,8 +1,5 @@
 package com.hs.algorithm.traceback.subset;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +11,7 @@ import java.util.List;
  * @date 2020/4/24/0024 13:03
  * @email husheng3921@163.com
  */
-public class Solution {
+public class Solution78 {
 
     /**
      *
@@ -67,7 +64,7 @@ public class Solution {
         return res;
     }
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution78 solution = new Solution78();
         int[] nums = {1,2,3};
         System.out.println(solution.subsets(nums).size());
     }

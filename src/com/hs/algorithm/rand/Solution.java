@@ -16,7 +16,7 @@ public class Solution {
         Solution solution = new Solution();
         int[] arr = {1, 3, 5, 7, 9};
         /*for(int i = 0; i < 100; i++){
-        int rand = (new Solution()).randInt(0,10);
+        int rand = (new Solution78()).randInt(0,10);
         System.out.println(rand);
         }*/
         solution.shuffle(arr);
