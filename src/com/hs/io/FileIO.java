@@ -7,7 +7,7 @@ package com.hs.io;
  * @date 2020/4/16/0016 11:43
  * @email husheng3921@163.com
  */
-public class FilerIO {
+public class FileIO {
 
     public static void main(String[] args) {
 
