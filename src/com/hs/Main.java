@@ -1,7 +1,8 @@
 package com.hs;
 
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * look in "c:\\user"
@@ -10,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Map<String, Integer> map = new HashMap<>();
+      /*  Map<String, Integer> map = new HashMap<>();
         map.put("husheng", 26);
         map.put("hh", 30);
         String jk = "hhh";
@@ -48,6 +49,21 @@ public class Main {
         System.out.println(aa == bb);
         String s1 = "33";
 
+        int a = 3;
+        int b = 4;
+        if(((a++)&1)==1 ||++b %2==0|| a<b){
+
+        }
+        System.out.println(a+"-"+b);*/
+        try(BufferedReader reader = new BufferedReader(new FileReader("t.txt"))){
+            String line;
+            while ((line = reader.readLine())!=null){
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        BufferedReader reader = null;
 
     }
 }

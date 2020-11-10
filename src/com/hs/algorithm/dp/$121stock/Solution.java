@@ -2,7 +2,7 @@ package com.hs.algorithm.dp.$121stock;
 
 /**
  * Created by husheng02.
- * 股票买卖的最佳时机,完成一笔交易
+ * 股票买卖的最佳时机,只允许完成一笔交易
  * @author <a href="mailto:husheng3921@163.com">胡圣</a>
  * @date 2020/09/10 15:41
  */
